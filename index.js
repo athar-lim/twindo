@@ -71,13 +71,21 @@ app.get('/posts', (req, res) => {
 // }
 
 //mongoose.connect('mongodb://atharworkspace_db_user:iPhone12mini@cluster0.exeebty.mongodb.net/?appName=Cluster0')
-mongoose.connect('mongodb://atharworkspace_db_user:iPhone12mini@ac-jvbsypk-shard-00-00.exeebty.mongodb.net:27017,ac-jvbsypk-shard-00-01.exeebty.mongodb.net:27017,ac-jvbsypk-shard-00-02.exeebty.mongodb.net:27017/test?ssl=true&replicaSet=atlas-lcbrdx-shard-0&authSource=admin&appName=Cluster0')
-.then(() => {
-  console.log('Connected to MongoDB');
-})
-.catch((err) => {
-  console.error('Failed to connect to MongoDB', err);
-});
+const isSRV = false;
+
+const srvURI = 'mongodb+srv://atharworkspace_db_user:iPhone12mini@ac-jvbsypk-shard-00-00.exeebty.mongodb.net/test?retryWrites=true&w=majority';
+const standardURI = 'mongodb://atharworkspace_db_user:iPhone12mini@ac-jvbsypk-shard-00-00.exeebty.mongodb.net:27017,ac-jvbsypk-shard-00-01.exeebty.mongodb.net:27017,ac-jvbsypk-shard-00-02.exeebty.mongodb.net:27017/test?ssl=true&replicaSet=atlas-lcbrdx-shard-0&authSource=admin&appName=Cluster0';
+
+const connectionURI = isSRV ? srvURI : standardURI
+console.log('Connecting to MongoDB with URI:', connectionURI);
+
+mongoose.connect(connectionURI)
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((err) => {
+    console.error('Failed to connect to MongoDB', err);
+  });
 
 // Post available for immediate use
 
