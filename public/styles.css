@@ -1,0 +1,122 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f8fc;
+  color: #2d3a4b;
+}
+
+/* Navbar */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin-left: 30px;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: #2d3a4b;
+  font-weight: 600;
+}
+
+nav .btn {
+  background-color: #0066cc;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .btn:hover {
+  background-color: #005bb5;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #0066cc;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.hero .highlight {
+  color: #ff9900;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hero .btn, .hero .client-portal {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero .btn {
+  background-color: #ff9900;
+}
+
+.hero .btn:hover {
+  background-color: #e68a00;
+}
+
+.hero .client-portal {
+  background-color: transparent;
+  border: 2px solid white;
+  margin-left: 20px;
+}
+
+.hero .client-portal:hover {
+  background-color: white;
+  color: #0066cc;
+}
+
+/* Footer */
+footer {
+  background-color: #2d3a4b;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
